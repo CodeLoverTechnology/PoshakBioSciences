@@ -1,0 +1,107 @@
+﻿@model IEnumerable<PoshakBioSciences.DbModel.M_ProductMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductSubTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KeyFeatures)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Composition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdApplication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdPresentation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImgPath1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImgPath2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImgPath3)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductSubTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KeyFeatures)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Composition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdApplication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdPresentation)
+        </td>
+        <td>
+            <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath+item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' width="50" height="50" />
+            @*@Html.DisplayFor(modelItem => item.ImgPath1)*@
+        </td>
+        <td>
+            <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath+item.ImgPath2)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' width="50" height="50" />
+        </td>
+        <td>
+            <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath+item.ImgPath3)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' width="50" height="50" />
+        </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+        </td>
+    </tr>
+}
+
+</table>

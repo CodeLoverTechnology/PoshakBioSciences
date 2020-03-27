@@ -3,36 +3,68 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Poshak Biosciences</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm justify-content-end">
+            <a class="navbar-brand" href="http://www.poshakbiosciences.com/">
+                <img src="~/Images/log2.png" alt="logo" style="width: 290px; height: 65px; margin-right: 595px;" />
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/Index" style="color: red; margin-right: 20px;"><b id="nvr1">HOME</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/About" style="color: black; margin-right: 20px;"><b id="nvr2">ABOUT</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/Product" style="color: black; margin-right: 20px;"><b id="nvr3">FEATURES</b></a>
+                </li>
+                @*<li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="~/Home/Product" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b id="nvr3">FEATURES</b></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="drp">
+                        <a class="nav-link" href="P-Gutcure.html" style="color: black; margin-right: 20px;"><b>P-Gutcure</b></a><hr>
+                        <a class="nav-link" href="P-Vitazyme.html" style="color: black; margin-right: 20px;"><b>P-Vitazyme</b></a><hr>
+                        <a class="nav-link" href="PondProbic.html" style="color: black; margin-right: 20px;"><b>PondProbic</b></a><hr>
+                        <a class="nav-link" href="ZeoTrace.html" style="color: black; margin-right: 20px;"><b>ZeoTrace</b></a><hr>
+                        <a class="nav-link" href="PoshakMin.html" style="color: black; margin-right: 20px;"><b>PoshakMin</b></a><hr>
+                        <a class="nav-link" href="Provita Gel.html" style="color: black; margin-right: 20px;"><b>Provita Gel</b></a><hr>
+                        <a class="nav-link" href="MoultGrow.html" style="color: black; margin-right: 20px;"><b>MoultGrow</b></a>
+                    </div>
+                    <span class="sr-only">(current)</span>
+                </li>*@
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/Contact" style="color: black;"><b id="nvr4">CONTACT</b></a>
+                </li>
+            </ul>
+        </nav>
     </div>
+    <hr>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    </div> 
+    <hr />
+    <div>
+        <div class="row" id="foot">
+            <div class="col-sm-4 text-center">
+                <p style="color: white; margin-top: 10px;">
+                    &copy; @DateTime.Now.Year - @DateTime.Now.AddYears(5).Year All Right Reserved by Poshak Biosciences.
+                    Developed by CodeLover Technology
+                </p>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <i class="fa fa-facebook" aria-hidden="true" style="margin-top: 30px; margin-left: 185px; font-size: 1.3em; color: white;"></i>
+                <i class="fa fa-linkedin" aria-hidden="true" style="margin-top: 30px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
+                <i class="fa fa-twitter" aria-hidden="true" style="margin-top: 30px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
+                <i class="fa fa-pinterest" aria-hidden="true" style="margin-top: 30px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
+                <i class="fa fa-google-plus" aria-hidden="true" style="margin-top: 30px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
+            </div>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

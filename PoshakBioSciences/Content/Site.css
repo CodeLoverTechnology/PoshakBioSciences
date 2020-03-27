@@ -1,24 +1,67 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿#first1 {
+    height: 145px;
+    width: 100%;
+    background-color: #ffccff;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+#first2 {
+    height: 145px;
+    width: 100%;
+    background-color: #ffccff;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+#highlight {
+    background-color: #990000;
+    border-radius: 9px;
+    color: white;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+
+#nvr1:hover {
+    background-color: white;
+    color: red;
+}
+
+#nvr2:hover {
+    background-color: white;
+    color: red;
+}
+
+#navbarDropdown {
+    color: black;
+    margin-right: 20px;
+}
+
+#nvr3:hover {
+    background-color: white;
+    color: red;
+}
+
+#nvr4:hover {
+    background-color: white;
+    color: red;
+}
+
+#foot {
+    background-color: rgb(70, 67, 67);
+}
+
+#drp {
+    text-align: center;
+}
+
+.profile-img {
+    display: block;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -90px auto auto auto;
+    box-shadow: 0px -2px 5px #4a4a4a;
+}
+
+#send {
+    width: 400px;
+    background-color: #e60000;
+    color: white;
+    border-color: #e60000;
 }

@@ -1,0 +1,172 @@
+﻿@model PoshakBioSciences.DbModel.M_ProductMaster
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm("Edit", "ProductMaster", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>M_ProductMaster</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ProductId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductSubTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductSubTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductSubTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProdDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProdDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProdDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KeyFeatures, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KeyFeatures, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KeyFeatures, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Composition, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Composition, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Composition, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProdApplication, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProdApplication, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProdApplication, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProdPresentation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProdPresentation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProdPresentation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImgPath1, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @if (!string.IsNullOrEmpty(Model.ImgPath1))
+                {
+                    @Html.HiddenFor(model => model.ImgPath1, new { htmlAttributes = new { @class = "form-control" } })
+                    <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath1)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' width="50" height="50" />
+                }
+                <div class="student_profile">
+                    <div class="form-group">
+                        <div class="profile_img">
+                            <img src="" id="profile-img-tag" />
+                            <input type="file" name="ImgPath1" id="ImgPath1" style="display:block" multiple="multiple" />
+                            <script src="~/Scripts/profile_img.js"></script>
+                        </div>
+                        @Html.HiddenFor(model => model.ImgPath1, new { @id = "hndStudentProfilePicPath" })
+                        @Html.ValidationMessageFor(model => model.ImgPath1, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImgPath2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @if (!string.IsNullOrEmpty(Model.ImgPath2))
+                {
+                    @Html.HiddenFor(model => model.ImgPath2, new { htmlAttributes = new { @class = "form-control" } })
+                    <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath2)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' width="50" height="50" />
+                }
+                <div class="student_profile">
+                    <div class="form-group">
+                        <div class="profile_img">
+                            <img src="" id="profile-img-tag2" />
+                            <input type="file" name="ImgPath2" id="ImgPath2" style="display:block" multiple="multiple" />
+                            <script src="~/Scripts/profile_img.js"></script>
+                        </div>
+                        @Html.HiddenFor(model => model.ImgPath2, new { @id = "hndStudentProfilePicPath" })
+                        @Html.ValidationMessageFor(model => model.ImgPath2, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImgPath3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @if (!string.IsNullOrEmpty(Model.ImgPath3))
+                {
+                    @Html.HiddenFor(model => model.ImgPath3, new { htmlAttributes = new { @class = "form-control" } })
+                    <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath3)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' width="50" height="50" />
+                }
+                <div class="student_profile">
+                    <div class="form-group">
+                        <div class="profile_img">
+                            <img src="" id="profile-img-tag3" />
+                            <input type="file" name="ImgPath3" id="ImgPath3" style="display:block" multiple="multiple" />
+                            <script src="~/Scripts/profile_img.js"></script>
+                        </div>
+                        @Html.HiddenFor(model => model.ImgPath3, new { @id = "hndStudentProfilePicPath" })
+                        @Html.ValidationMessageFor(model => model.ImgPath3, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        @Html.HiddenFor(model => model.CreatedBy, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.HiddenFor(model => model.CreatedDate, new { htmlAttributes = new { @class = "form-control" } })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Active)
+                    @Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

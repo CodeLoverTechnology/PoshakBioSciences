@@ -1,0 +1,94 @@
+﻿
+@model IEnumerable<PoshakBioSciences.DbModel.M_ProductMaster>
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Product : Poshak BioSciences </h2>
+<hr />
+<div class="container-fluid p-5">
+    <div class="row">
+        @{
+            int i = 0;
+            foreach (var item in Model)
+            {
+                <div class="col-md-4 col-xl-4 col-lg-4 col-sm-6 col-xs-12 p-2">
+                    @if (i == 0 || i == 3 || i == 6)
+                    {
+                    <div class="m-2 p-3 btn btn-outline-success shadow">
+                        <h1 class="text-uppercase">
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </h1>
+                        
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
+                        <hr />
+                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <div class="text-center">
+                            @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
+                        </div>
+                    </div>
+                    }
+                    else if (i == 1 || i == 4 || i == 7)
+                    {
+                    <div class="m-2 p-3 shadow btn btn-outline-primary">
+                        <h1 class="text-uppercase">
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </h1>
+
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
+                        <hr />
+                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <div class="text-center">
+                            @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
+                        </div>
+                    </div>
+                    }
+                    else if (i == 2 || i == 5 || i == 8)
+                    {
+                    <div class="m-2  p-3 shadow  btn btn-outline-danger">
+                        <h1 class="text-uppercase">
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </h1>
+
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
+                        <hr />
+                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <div class="text-center">
+                            @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
+                        </div>
+                    </div>
+                    }
+                    else
+                    {
+                    <div class="m-2  p-3 shadow  btn btn-outline-info">
+                        <h1 class="text-uppercase">
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </h1>
+
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
+                        <hr />
+                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <div class="text-center">
+                            @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
+                        </div>
+                    </div>
+                        
+                    }
+                </div>
+                i++;
+            }
+        }
+    </div>
+</div>
+
+
+
+
+
+

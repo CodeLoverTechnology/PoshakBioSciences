@@ -1,0 +1,35 @@
+﻿@model PoshakBioSciences.DbModel.M_ProductMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container shadow btn btn-outline-secondary">
+    <h2 class="bg-success p-3 text-white text-center text-uppercase">Product Details : @Html.DisplayFor(model => model.ProductName)</h2>
+    <hr />
+    <div>
+        <h4>@Html.DisplayFor(model => model.ProductSubTitle)</h4>
+        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath1)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail" style="max-width:450px;max-height:250px;" />
+
+        <p class="text-justify;">@Html.DisplayFor(model => model.ProdDescription)</p>
+        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath2)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail"   style="max-width:450px;max-height:250px;"/>
+
+        <p class="text-justify">
+            @Html.DisplayFor(model => model.KeyFeatures)
+        </p>
+                <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath3)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail"  style="max-width:450px;max-height:250px;" />
+
+                <p class="text-justify">
+                    @Html.DisplayFor(model => model.Composition)
+                    @Html.DisplayFor(model => model.ProdApplication)
+                    @Html.DisplayFor(model => model.ProdPresentation)
+                </p>
+
+
+</div>
+
+</div>
+<br />
+<p>
+      @Html.ActionLink("Back to Product List", "Product","Home",null, new { @class ="btn btn-success" })
+</p>
