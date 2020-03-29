@@ -15,49 +15,49 @@
             foreach (var item in Model)
             {
                 <div class="col-md-4 col-xl-4 col-lg-4 col-sm-6 col-xs-12 p-2">
-                    @if (i == 0 || i == 3 || i == 6)
+                    @if (i == 0 || i == 3 || i == 6 || i == 9)
                     {
                     <div class="m-2 p-3 btn btn-outline-success shadow">
                         <h1 class="text-uppercase">
                             @Html.DisplayFor(modelItem => item.ProductName)
                         </h1>
                         
-                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" style="max-height:250px;max-width:300px;" />
                         <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
                         <hr />
-                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <p class="text-justify overflow-hidden h-50" style="max-height:200px;">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
                         <div class="text-center">
                             @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
                         </div>
                     </div>
                     }
-                    else if (i == 1 || i == 4 || i == 7)
+                    else if (i == 1 || i == 4 || i == 7 || i == 10)
                     {
                     <div class="m-2 p-3 shadow btn btn-outline-primary">
                         <h1 class="text-uppercase">
                             @Html.DisplayFor(modelItem => item.ProductName)
                         </h1>
 
-                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail"  style="max-height:250px;max-width:300px;"/>
                         <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
                         <hr />
-                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <p class="text-justify overflow-hidden  h-50" style="max-height:200px;">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
                         <div class="text-center">
                             @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
                         </div>
                     </div>
                     }
-                    else if (i == 2 || i == 5 || i == 8)
+                    else if (i == 2 || i == 5 || i == 8 || i == 11)
                     {
                     <div class="m-2  p-3 shadow  btn btn-outline-danger">
                         <h1 class="text-uppercase">
                             @Html.DisplayFor(modelItem => item.ProductName)
                         </h1>
 
-                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail"  style="max-height:250px;max-width:300px;"/>
                         <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
                         <hr />
-                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <p class="text-justify overflow-hidden"  style="max-height:200px;">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
                         <div class="text-center">
                             @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
                         </div>
@@ -69,11 +69,10 @@
                         <h1 class="text-uppercase">
                             @Html.DisplayFor(modelItem => item.ProductName)
                         </h1>
-
-                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail" />
+                        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + item.ImgPath1)' alt='@(item.ProductName + item.ProductSubTitle)' title='@(item.ProductName + item.ProductSubTitle)' class="img-fluid img-thumbnail"  style="max-height:250px;max-width:300px;"/>
                         <small class="h5">@Html.DisplayFor(modelItem => item.ProductSubTitle)</small>
                         <hr />
-                        <p class="text-justify">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
+                        <p class="text-justify overflow-hidden" style="max-height:200px;">@Html.DisplayFor(modelItem => item.ProdDescription)</p>
                         <div class="text-center">
                             @Html.ActionLink("Read More...", "Details", "ProductMaster", new { id = item.ProductId }, new { @class = "nav-link  h6 text-white btn btn-dark" })
                         </div>

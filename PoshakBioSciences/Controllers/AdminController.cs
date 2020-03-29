@@ -14,11 +14,11 @@ namespace PoshakBioSciences.Controllers
         {
             if (!CommonFunction.CheckUserAuthentication())
             {
-                return RedirectToAction("D2cLogin", "D2cHome");
+                return RedirectToAction("LoginAdmin", "Admin");
             }
-            if (!CommonFunction.CheckUserAccessAuthorization("View", Convert.ToInt32(Session["RoleID"].ToString()), "D2cHome"))
+            if (!CommonFunction.CheckUserAccessAuthorization("View", Convert.ToInt32(Session["RoleID"].ToString()), "Admin"))
             {
-                return RedirectToAction("UnAuthorised", "D2cHome");
+                return RedirectToAction("UnAuthorised", "Admin");
             }
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             Response.Cache.SetExpires(DateTime.UtcNow.AddHours(-1));

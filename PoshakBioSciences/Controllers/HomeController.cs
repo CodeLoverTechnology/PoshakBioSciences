@@ -15,9 +15,9 @@ namespace PoshakBioSciences.Controllers
         private PoshBioSolDbEntities db = new PoshBioSolDbEntities();
 
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            return View(await db.M_ProductMaster.OrderByDescending(x =>x.ProductId).ToListAsync());
         }
 
         public ActionResult About()

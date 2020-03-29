@@ -4,31 +4,54 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container shadow btn btn-outline-secondary">
+<div class="container shadow">
     <h2 class="bg-success p-3 text-white text-center text-uppercase">Product Details : @Html.DisplayFor(model => model.ProductName)</h2>
     <hr />
-    <div>
-        <h4>@Html.DisplayFor(model => model.ProductSubTitle)</h4>
-        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath1)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail" style="max-width:450px;max-height:250px;" />
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h4>@Html.DisplayFor(model => model.ProductSubTitle)</h4>
+            <p class="text-justify;">@Html.DisplayFor(model => model.ProdDescription)</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath1)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail" style="max-width:450px;max-height:250px;" />
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="p-3 bg-info text-white">Key Features : </h3>
+            <p class="text-justify">
+                @Html.DisplayFor(model => model.KeyFeatures)
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @if(!string.IsNullOrEmpty(Model.ImgPath2))
+            {
+            <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath2)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail" style="max-width:450px;max-height:250px;" />
+            }
+            
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @if (!string.IsNullOrEmpty(Model.ImgPath2))
+            {
+                <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath3)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail" style="max-width:450px;max-height:250px;" />
+            }
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="p-3 bg-info text-white">Composition : </h3>
+            <p class="text-justify img-thumbnail shadow">
+                @Html.DisplayFor(model => model.Composition)
+            </p>
+            <h3 class="p-3 bg-info text-white">Application : </h3>
+            <p class="text-justify img-thumbnail shadow">
+                @Html.DisplayFor(model => model.ProdApplication)
+            </p>
+            <h3 class="p-3 bg-info text-white">Presentation : </h3>
+            <p class="text-justify img-thumbnail shadow">
+                @Html.DisplayFor(model => model.ProdPresentation)
+            </p>
+            </div>
 
-        <p class="text-justify;">@Html.DisplayFor(model => model.ProdDescription)</p>
-        <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath2)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail"   style="max-width:450px;max-height:250px;"/>
+        </div>
 
-        <p class="text-justify">
-            @Html.DisplayFor(model => model.KeyFeatures)
-        </p>
-                <img src='@(Resources.PoshakBioSciencesWebResources.ShowImagesPath + Model.ImgPath3)' alt='@(Model.ProductName + Model.ProductSubTitle)' title='@(Model.ProductName + Model.ProductSubTitle)' class="img-fluid img-thumbnail"  style="max-width:450px;max-height:250px;" />
-
-                <p class="text-justify">
-                    @Html.DisplayFor(model => model.Composition)
-                    @Html.DisplayFor(model => model.ProdApplication)
-                    @Html.DisplayFor(model => model.ProdPresentation)
-                </p>
-
-
-</div>
-
-</div>
+    </div>
 <br />
 <p>
       @Html.ActionLink("Back to Product List", "Product","Home",null, new { @class ="btn btn-success" })

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<PoshakBioSciences.DbModel.M_ProductMaster>
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -103,3 +104,5 @@
         </center>
     </div>
 </div><br><br><br>
+
+@Html.Partial("_ProductViewPartial")
