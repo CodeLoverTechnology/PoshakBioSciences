@@ -18,6 +18,7 @@ namespace PoshakBioSciences.Controllers
         public async Task<ActionResult> Index()
         {
             return View(await db.M_ProductMaster.OrderByDescending(x =>x.ProductId).ToListAsync());
+            //return View();
         }
 
         public ActionResult About()

@@ -4,60 +4,175 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Poshak Biosciences</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Favicons -->
+    <link href="~/LogoPoshakBioScience.ico" rel="icon">
+    <link href="~/Apple-Icon-PoshakBioScience.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/Content/aos.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-icons.css" rel="stylesheet" />
+    <link href="~/Content/glightbox.min.css" rel="stylesheet" />
+    <link href="~/Content/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+<link href="~/Content/Style.css" rel="stylesheet" />
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body class="bg-light">
-    <div class="container-fluid bg-light text-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
-            <a class="navbar-brand float-left text-left" href="http://www.poshakbiosciences.com/">
-                <img src="~/Images/log2.png" alt="logo" style="width: 290px; height: 65px;" />
-            </a>
-            <button class="navbar-toggler float-right text-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse float-right text-right" id="navbarText">
-                <ul class="navbar-nav mr-auto float-right text-right">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="~/Home/Index" style="color: red; margin-right: 20px;"><b id="nvr1">HOME</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="~/Home/About" style="color: black; margin-right: 20px;"><b id="nvr2">ABOUT</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="~/Home/Product" style="color: black; margin-right: 20px;"><b id="nvr3">PRODUCTS</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="~/Home/Contact" style="color: black; margin-right: 20px;"><b id="nvr4">CONTACT</b></a>
-                    </li>
-                </ul>
+<body>
+    <section id="hero">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="~/Images/VB_PS_1.mp4" type="video/mp4" />
+            </video>
+            <div class="caption">
+                <div class="hero-container container-fluid">
+                    <div class="wow fadeIn">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="hero-logo">
+                                    <img class="" src="~/Images/LogoPoshakBioScience.png" alt="Poshak BioScience">
+                                </div>
+                            </div>
+                            <div class="col-6 p-5">
+                                <div class="hero-logo">
+                                    <h1>Welcome to Poshak BioSciencs</h1>
+                                    <h2>We Provide <span class="typed" data-typed-items="NATURALLY IMPROVE AQUACULTURE, MODERN BIOSCIENCES & TECHNOLOGY, INNOVATION FOR THE QUALITY PRODUCTS IN THE FIELD OF AQUACULTURE, FULLY BIOTIC NATURAL QUALITY PRODUCTS AQUACULTURE"></span></h2>
+                                    <div class="actions">
+                                        <a href="#about" class="btn-get-started">Get Strated</a>
+                                        <a href="#services" class="btn-services">Our Services</a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </div>
-    <hr>
-    <div class="container body-content">
-        @RenderBody()
-    </div> 
-    <hr />
-    <div>
-        <div class="row" id="foot">
-            <div class="col-8 text-center  p-3">
-                <p style="color: white; margin-top: 10px;">
-                    &copy; @DateTime.Now.Year - @DateTime.Now.AddYears(5).Year All Right Reserved by Poshak Biosciences. 
-                    Developed by <a href="http://codelovertechnology.com/" target="_blank">CodeLover Technology</a>
-                </p>
-            </div>
-            <div class="col-4 p-3">
-                <i class="fa fa-facebook" aria-hidden="true" style="margin-top: 10px; margin-left: 185px; font-size: 1.3em; color: white;"></i>
-                <i class="fa fa-linkedin" aria-hidden="true" style="margin-top: 10px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
-                <i class="fa fa-twitter" aria-hidden="true" style="margin-top: 10px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
-                <i class="fa fa-instagram" aria-hidden="true" style="margin-top: 10px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
-             </div>
         </div>
+        
+    </section><!-- End Hero -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="http://www.poshakbiosciences.com/" class="logo mr-auto">
+                <img class="img-fluid" src="~/Images/FullBannerPS.png" alt="Poshak BioScience"/>
+            </a>
+           
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    @*<div class="container-fluid bg-light text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
+                <a class="navbar-brand float-left text-left" href="http://www.poshakbiosciences.com/">
+                    <img src="~/Images/log2.png" alt="logo" style="width: 290px; height: 65px;" />
+                </a>
+                <button class="navbar-toggler float-right text-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse float-right text-right" id="navbarText">
+                    <ul class="navbar-nav mr-auto float-right text-right">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="~/Home/Index" style="color: red; margin-right: 20px;"><b id="nvr1">HOME</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Home/About" style="color: black; margin-right: 20px;"><b id="nvr2">ABOUT</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Home/Product" style="color: black; margin-right: 20px;"><b id="nvr3">PRODUCTS</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Home/Contact" style="color: black; margin-right: 20px;"><b id="nvr4">CONTACT</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>*@
+    <hr>
+    <div>
+        @RenderBody()
     </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        &copy; @DateTime.Now.Year - @DateTime.Now.AddYears(5).Year All Right Reserved by Poshak Biosciences.
+                    </div>
+                    <div class="credits">
+
+                        Developed by <a href="http://codelovertechnology.com/" target="_blank">CodeLover Technology</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa fa-arrow-up"></i></a>
+    @*<div>
+            <div class="row" id="foot">
+                <div class="col-8 text-center  p-3">
+                    <p style="color: white; margin-top: 10px;">
+                        &copy; @DateTime.Now.Year - @DateTime.Now.AddYears(5).Year All Right Reserved by Poshak Biosciences.
+                        Developed by <a href="http://codelovertechnology.com/" target="_blank">CodeLover Technology</a>
+                    </p>
+                </div>
+                <div class="col-4 p-3">
+                    <i class="fa fa-facebook" aria-hidden="true" style="margin-top: 10px; margin-left: 185px; font-size: 1.3em; color: white;"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true" style="margin-top: 10px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
+                    <i class="fa fa-twitter" aria-hidden="true" style="margin-top: 10px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
+                    <i class="fa fa-instagram" aria-hidden="true" style="margin-top: 10px; margin-left: 15px; font-size: 1.3em; color: white;"></i>
+                </div>
+            </div>
+        </div>*@
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    <script src="~/Scripts/aos.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/glightbox.min.js"></script>
+    <script src="~/Scripts/isotope.pkgd.min.js"></script>
+    @*<script src="assets/vendor/php-email-form/validate.js"></script>*@
+    <script src="~/Scripts/swiper-bundle.min.js"></script>
+    <script src="~/Scripts/typed.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/Scripts/main.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
